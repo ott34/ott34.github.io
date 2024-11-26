@@ -406,7 +406,7 @@
 function highlightRowsByDate() {
   const table = document.querySelector('table'); // Select the table element
   const today = new Date();
-  const todayDate = today.toISOString().split('T')[0]; // Get today's date in "YYYY-MM-DD" format
+  const todayDate = today.toLocaleString("en-CA").split(',')[0]; // Get today's date in "YYYY-MM-DD" format
 
   // Iterate through each row in the table
   for (let i = 0; i < table.rows.length; i++) {
